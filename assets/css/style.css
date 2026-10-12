@@ -1,0 +1,174 @@
+/* Sarah Holdyn — 2026 brand tokens */
+:root {
+  --night-sky: #0E1C29;
+  --midnight-navy: #132A3D;
+  --prairie-cream: #E8E0D0;
+  --golden-hour: #C9A46A;
+  --saddle-leather: #7E4E2E;
+  --surface: #1A2B3A;
+  --line: #2C3E50;
+  --stone: #8C939B;
+  --mist: #B9C0C8;
+  --ink-soft: #33424F;
+
+  --font-display: 'Cinzel', Georgia, serif;
+  --font-body: 'Work Sans', Helvetica, Arial, sans-serif;
+  --max: 1280px;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--night-sky);
+  color: var(--prairie-cream);
+  font-family: var(--font-body);
+  font-weight: 400;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+img { max-width: 100%; display: block; }
+a { color: var(--golden-hour); }
+a:hover { color: var(--prairie-cream); }
+h1, h2, h3, p, figure { margin: 0; }
+:focus-visible { outline: 2px solid var(--golden-hour); outline-offset: 3px; }
+
+.container { max-width: var(--max); margin: 0 auto; padding: 0 32px; }
+.eyebrow {
+  font-size: 14px; font-weight: 600; letter-spacing: 0.3em;
+  text-transform: uppercase; color: var(--golden-hour);
+}
+.eyebrow--leather { color: var(--saddle-leather); }
+.h2 {
+  font-family: var(--font-display); font-weight: 600;
+  font-size: clamp(32px, 4vw, 44px); line-height: 1.12;
+}
+.lede { font-size: 18px; font-weight: 300; line-height: 1.7; }
+.link-caps {
+  font-size: 14px; font-weight: 600; letter-spacing: 0.14em;
+  text-transform: uppercase; text-decoration: none;
+}
+.link-caps:hover { text-decoration: underline; }
+
+/* Buttons */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-height: 52px; padding: 0 30px; border-radius: 2px;
+  font-family: var(--font-body); font-size: 14px; font-weight: 600;
+  letter-spacing: 0.14em; text-transform: uppercase; text-decoration: none;
+  border: 1px solid transparent; cursor: pointer; transition: background .2s, color .2s;
+}
+.btn--gold { background: var(--golden-hour); color: var(--midnight-navy); }
+.btn--gold:hover { background: var(--prairie-cream); color: var(--midnight-navy); }
+.btn--ghost { border-color: var(--prairie-cream); color: var(--prairie-cream); }
+.btn--ghost:hover { background: var(--prairie-cream); color: var(--midnight-navy); }
+
+/* Header */
+.site-header { background: var(--midnight-navy); border-bottom: 1px solid var(--line); position: sticky; top: 0; z-index: 10; }
+.site-header .container {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+  gap: 16px 32px; padding-top: 18px; padding-bottom: 18px;
+}
+.site-header .logo img { height: 44px; width: auto; }
+.nav { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 32px; }
+.nav a {
+  color: var(--prairie-cream); text-decoration: none;
+  font-size: 14px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase;
+}
+.nav a:hover { color: var(--golden-hour); }
+.nav .btn { min-height: 44px; padding: 0 22px; color: var(--midnight-navy); }
+
+/* Hero */
+.hero { position: relative; min-height: 680px; display: flex; align-items: center; overflow: hidden; }
+.hero__img { position: absolute; top: 0; right: 0; width: 64%; height: 100%; object-fit: cover; object-position: 60% 30%; }
+.hero::after {
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(90deg, var(--night-sky) 36%, rgba(14,28,41,.75) 52%, rgba(14,28,41,0) 75%);
+}
+.hero .container { position: relative; z-index: 1; width: 100%; padding-top: 96px; padding-bottom: 96px; }
+.hero__copy { max-width: 600px; display: flex; flex-direction: column; gap: 28px; }
+.hero h1 {
+  font-family: var(--font-display); font-weight: 600;
+  font-size: clamp(38px, 5vw, 64px); line-height: 1.08;
+}
+.rule { width: 96px; height: 2px; background: var(--golden-hour); }
+.hero p.lede { font-size: 19px; }
+.btn-row { display: flex; flex-wrap: wrap; gap: 16px; }
+
+/* Shows */
+.shows { background: var(--midnight-navy); padding: 96px 0; }
+.section-head { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 24px; margin-bottom: 48px; }
+.section-head > div { display: flex; flex-direction: column; gap: 12px; }
+.show-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; }
+.show {
+  background: var(--night-sky); border: 1px solid var(--line); padding: 32px;
+  display: flex; flex-direction: column; gap: 14px;
+}
+.show__date { font-family: var(--font-display); font-weight: 600; font-size: 28px; color: var(--golden-hour); }
+.show__venue { font-size: 20px; font-weight: 500; }
+.show__city { font-size: 15px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--stone); }
+.show .btn { margin-top: 8px; min-height: 46px; border-color: var(--golden-hour); color: var(--golden-hour); font-size: 13px; }
+.show .btn:hover { background: var(--golden-hour); color: var(--midnight-navy); }
+
+/* About */
+.about { background: var(--prairie-cream); color: var(--midnight-navy); padding: 112px 0; }
+.about .container { display: flex; flex-wrap: wrap; align-items: center; gap: 64px; }
+.about__img { flex: 1 1 420px; min-width: 0; max-width: 580px; aspect-ratio: 4 / 3.5; object-fit: cover; }
+.about__copy { flex: 1 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 24px; }
+.about__copy p.body { font-size: 18px; line-height: 1.7; color: var(--ink-soft); }
+.chips { display: flex; flex-wrap: wrap; gap: 10px; padding: 0; margin: 0; list-style: none; }
+.chips li { padding: 8px 16px; border: 1px solid var(--saddle-leather); color: var(--saddle-leather); font-size: 14px; font-weight: 500; border-radius: 999px; }
+.about a.link-caps { color: var(--saddle-leather); }
+
+/* Live */
+.live { padding: 112px 0; }
+.live__head { display: flex; flex-direction: column; gap: 12px; max-width: 720px; margin-bottom: 48px; }
+.gallery { display: flex; flex-wrap: wrap; gap: 24px; }
+.gallery figure { flex: 1 1 360px; min-width: 0; display: flex; flex-direction: column; gap: 14px; }
+.gallery figure:last-child { flex: 1.4 1 420px; }
+.gallery img { width: 100%; height: 520px; object-fit: cover; }
+.gallery figcaption { font-size: 13px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--stone); }
+
+/* Booking */
+.booking { background: var(--midnight-navy); padding: 112px 0; border-top: 1px solid var(--line); }
+.booking .container { display: flex; flex-wrap: wrap; gap: 64px; align-items: start; }
+.booking__copy { flex: 1 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 20px; }
+.booking__copy .contact { font-size: 16px; color: var(--mist); }
+.form {
+  flex: 1 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 18px;
+  background: var(--night-sky); border: 1px solid var(--line); padding: 40px;
+}
+.field { display: flex; flex-direction: column; gap: 8px; }
+.field label { font-size: 13px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; }
+.field input, .field textarea {
+  min-height: 48px; padding: 12px 14px; background: var(--surface); border: 1px solid var(--line);
+  color: var(--prairie-cream); font-family: var(--font-body); font-size: 16px; border-radius: 0;
+}
+.field textarea { resize: vertical; }
+.field input:focus, .field textarea:focus { border-color: var(--golden-hour); outline: none; }
+.hp { position: absolute; left: -9999px; }
+.form .btn { border: none; }
+.form-msg { font-size: 16px; color: var(--golden-hour); }
+
+/* Footer */
+.site-footer { padding: 56px 0 40px; border-top: 1px solid var(--line); }
+.site-footer .container { display: flex; flex-direction: column; gap: 32px; }
+.footer-top { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 24px; }
+.footer-top img { height: 40px; width: auto; }
+.footer-rule { height: 1px; background: var(--line); }
+.copyright { font-size: 14px; color: var(--stone); }
+
+/* Small screens */
+@media (max-width: 760px) {
+  .container { padding: 0 20px; }
+  .site-header { position: static; }
+  .site-header .logo img { height: 36px; }
+  .nav { gap: 8px 20px; }
+  .hero { min-height: 0; flex-direction: column; align-items: stretch; }
+  .hero__img { position: static; width: 100%; height: 420px; object-position: 55% 25%; }
+  .hero::after { display: none; }
+  .hero .container { padding-top: 40px; padding-bottom: 64px; }
+  .shows, .about, .live, .booking { padding: 72px 0; }
+  .gallery img { height: 380px; }
+  .form { padding: 28px 20px; }
+}
