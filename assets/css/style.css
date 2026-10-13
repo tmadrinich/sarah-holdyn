@@ -76,6 +76,7 @@ h1, h2, h3, p, figure { margin: 0; }
   font-size: 14px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase;
 }
 .nav a:hover { color: var(--golden-hour); }
+.nav a[aria-current="page"]:not(.btn) { color: var(--golden-hour); text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 8px; }
 .nav .btn { min-height: 44px; padding: 0 22px; color: var(--midnight-navy); }
 
 /* Hero */
@@ -94,6 +95,21 @@ h1, h2, h3, p, figure { margin: 0; }
 .rule { width: 96px; height: 2px; background: var(--golden-hour); }
 .hero p.lede { font-size: 19px; }
 .btn-row { display: flex; flex-wrap: wrap; gap: 16px; }
+
+/* Page header (inner pages) */
+.page-head { padding: 104px 0 80px; }
+.page-head--navy { background: var(--midnight-navy); }
+.page-head .container { display: flex; flex-direction: column; gap: 22px; }
+.page-head h1 {
+  font-family: var(--font-display); font-weight: 600;
+  font-size: clamp(40px, 5vw, 60px); line-height: 1.08;
+}
+.page-head .lede { max-width: 640px; }
+
+/* Booking callout band */
+.cta-band { padding: 96px 0; border-top: 1px solid var(--line); }
+.cta-band .container { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 32px; }
+.cta-band__copy { display: flex; flex-direction: column; gap: 14px; max-width: 640px; }
 
 /* Shows */
 .shows { background: var(--midnight-navy); padding: 96px 0; }
@@ -168,7 +184,8 @@ h1, h2, h3, p, figure { margin: 0; }
   .hero__img { position: static; width: 100%; height: 420px; object-position: 55% 25%; }
   .hero::after { display: none; }
   .hero .container { padding-top: 40px; padding-bottom: 64px; }
-  .shows, .about, .live, .booking { padding: 72px 0; }
+  .shows, .about, .live, .booking, .cta-band { padding: 72px 0; }
+  .page-head { padding: 64px 0 56px; }
   .gallery img { height: 380px; }
   .form { padding: 28px 20px; }
 }

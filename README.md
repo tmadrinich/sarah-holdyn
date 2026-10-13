@@ -5,7 +5,11 @@ Static site for Sarah Holdyn, country / country-pop singer-songwriter (Upper Mid
 ## Structure
 
 ```
-index.html            Home page
+index.html            Home — hero, next 3 shows, booking callout
+about/index.html      About Sarah
+shows/index.html      2026 show list
+live/index.html       The band, live photos
+contact/index.html    Booking contact + StaticForms form
 assets/css/style.css  Brand tokens + all styles
 assets/img/           Logos (cream / gold / navy), photos, favicon
 ```
@@ -24,8 +28,10 @@ Fonts: **Cinzel** (headers) and **Work Sans** (body), via Google Fonts.
 
 ## Before launch
 
-- [ ] Fill in show cards (`[DATE]`, `[VENUE NAME]`, `[CITY, STATE]`) in `index.html`
-- [ ] Booking email (`[BOOKING EMAIL]`)
-- [ ] StaticForms access key (`[STATICFORMS_ACCESS_KEY]`) and redirect URL (`[SITE_URL]`)
+- [ ] Fill in show cards (`[DATE]`, `[VENUE NAME]`, `[CITY, STATE]`) in `shows/index.html`, and copy the next 3 to the home page's "Next Up"
+- [ ] Booking email (`[BOOKING EMAIL]`) in `contact/index.html`
+- [ ] StaticForms access key (`[STATICFORMS_ACCESS_KEY]`) and redirect URL (`[SITE_URL]`) in `contact/index.html`
 - [ ] Swap photos for full-resolution originals from the photographer
 - [ ] Point the domain (GoDaddy) and add a `CNAME` file
+
+Header and footer are repeated in every page. Change one, change all five.

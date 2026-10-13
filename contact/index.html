@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact &amp; Booking | Sarah Holdyn</title>
+  <meta name="description" content="Book Sarah Holdyn for venues, festivals, fairs and private events — solo acoustic or full band.">
+  <meta property="og:title" content="Contact &amp; Booking | Sarah Holdyn">
+  <meta property="og:description" content="Bring Sarah Holdyn and the band to your stage.">
+  <meta property="og:image" content="../assets/img/hat.jpg">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/png" href="../assets/img/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Work+Sans:wght@300;400;500;600&display=swap">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a class="logo" href="../"><img src="../assets/img/logo-cream.png" alt="Sarah Holdyn — home" width="771" height="171"></a>
+    <nav class="nav" aria-label="Main">
+      <a href="../about/">About</a>
+      <a href="../shows/">Shows</a>
+      <a href="../live/">Live</a>
+      <a href="../contact/" aria-current="page">Contact</a>
+      <a class="btn btn--gold" href="../contact/">Book Sarah</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="page-head">
+    <div class="container">
+      <p class="eyebrow">Booking</p>
+      <h1>Bring Sarah to your stage</h1>
+      <div class="rule" aria-hidden="true"></div>
+      <p class="lede">Venues, festivals, fairs and private events. Solo acoustic or full band.</p>
+    </div>
+  </section>
+
+  <section class="booking">
+    <div class="container">
+      <div class="booking__copy">
+        <p class="eyebrow">Booking contact</p>
+        <p class="contact">[BOOKING EMAIL]</p>
+        <p class="lede">Send the date, venue and city, and whether you’d like solo acoustic or the full band. We’ll get back to you with availability.</p>
+      </div>
+
+      <!-- StaticForms: replace [STATICFORMS_ACCESS_KEY] and [SITE_URL] before going live. -->
+      <form class="form" id="booking-form" action="https://api.staticforms.xyz/submit" method="post">
+        <input type="hidden" name="accessKey" value="[STATICFORMS_ACCESS_KEY]">
+        <input type="hidden" name="subject" value="New booking inquiry — sarahholdyn.com">
+        <input type="hidden" name="replyTo" value="@">
+        <input type="hidden" name="redirectTo" value="[SITE_URL]/contact/?success=true">
+        <input type="text" name="honeypot" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <div class="field">
+          <label for="bk-name">Name</label>
+          <input id="bk-name" name="name" type="text" autocomplete="name" required>
+        </div>
+        <div class="field">
+          <label for="bk-email">Email</label>
+          <input id="bk-email" name="email" type="email" autocomplete="email" required>
+        </div>
+        <div class="field">
+          <label for="bk-event">Event date &amp; details</label>
+          <textarea id="bk-event" name="message" rows="4" required></textarea>
+        </div>
+        <button class="btn btn--gold" type="submit">Send booking inquiry</button>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-top">
+      <img src="../assets/img/logo-gold.png" alt="Sarah Holdyn" width="771" height="171">
+      <nav class="nav" aria-label="Social">
+        <a href="https://www.instagram.com/sarah.holdyn/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.facebook.com/sarahholdynofficial/" target="_blank" rel="noopener">Facebook</a>
+        <a href="https://youtube.com/@sarahholdyn" target="_blank" rel="noopener">YouTube</a>
+        <a href="https://www.tiktok.com/@sarahholdyn" target="_blank" rel="noopener">TikTok</a>
+        <a href="https://x.com/sarahholdyn" target="_blank" rel="noopener">X</a>
+      </nav>
+    </div>
+    <div class="footer-rule"></div>
+    <p class="copyright">© Sarah Holdyn 2024–2026</p>
+  </div>
+</footer>
+
+<script>
+  // Swap the form for a thank-you after StaticForms redirects back with ?success=true
+  if (new URLSearchParams(location.search).get('success') === 'true') {
+    var f = document.getElementById('booking-form');
+    if (f) {
+      var p = document.createElement('p');
+      p.className = 'form-msg';
+      p.textContent = 'Thanks — your booking inquiry is in. We’ll be in touch soon.';
+      f.replaceWith(p);
+    }
+  }
+</script>
+</body>
+</html>

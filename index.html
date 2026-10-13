@@ -15,17 +15,17 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Work+Sans:wght@300;400;500;600&display=swap">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body id="top">
+<body>
 
 <header class="site-header">
   <div class="container">
-    <a class="logo" href="#top"><img src="assets/img/logo-cream.png" alt="Sarah Holdyn" width="771" height="171"></a>
+    <a class="logo" href="./" aria-current="page"><img src="assets/img/logo-cream.png" alt="Sarah Holdyn" width="771" height="171"></a>
     <nav class="nav" aria-label="Main">
-      <a href="#about">About</a>
-      <a href="#shows">Shows</a>
-      <a href="#live">Live</a>
-      <a href="#contact">Contact</a>
-      <a class="btn btn--gold" href="#contact">Book Sarah</a>
+      <a href="about/">About</a>
+      <a href="shows/">Shows</a>
+      <a href="live/">Live</a>
+      <a href="contact/">Contact</a>
+      <a class="btn btn--gold" href="contact/">Book Sarah</a>
     </nav>
   </div>
 </header>
@@ -40,23 +40,23 @@
         <div class="rule" aria-hidden="true"></div>
         <p class="lede">Sarah Holdyn and the band are bringing original songs and your country favorites to stages across the Upper Midwest all season long.</p>
         <div class="btn-row">
-          <a class="btn btn--gold" href="#shows">See 2026 Shows</a>
+          <a class="btn btn--gold" href="shows/">See 2026 Shows</a>
           <a class="btn btn--ghost" href="https://youtube.com/@sarahholdyn" target="_blank" rel="noopener">Watch Live</a>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="shows" id="shows">
+  <section class="shows" aria-labelledby="next-shows">
     <div class="container">
       <div class="section-head">
         <div>
           <p class="eyebrow">2026 Season</p>
-          <h2 class="h2">Upcoming Shows</h2>
+          <h2 class="h2" id="next-shows">Next Up</h2>
         </div>
-        <a class="link-caps" href="https://www.sarahholdyn.com/events">Full summer schedule →</a>
+        <a class="link-caps" href="shows/">All shows →</a>
       </div>
-      <!-- Show cards: copy an <article> block per show. -->
+      <!-- Next 3 shows. Keep in sync with shows/index.html. -->
       <div class="show-grid">
         <article class="show">
           <p class="show__date">[DATE]</p>
@@ -80,77 +80,14 @@
     </div>
   </section>
 
-  <section class="about" id="about">
+  <section class="cta-band" aria-labelledby="cta-title">
     <div class="container">
-      <img class="about__img" src="assets/img/road.jpg" alt="Sarah twirling a floral dress on a gravel country road at golden hour">
-      <div class="about__copy">
-        <p class="eyebrow eyebrow--leather">About Sarah</p>
-        <h2 class="h2">A songwriter since childhood. A performer for over a decade.</h2>
-        <p class="body">Sarah is a singer, songwriter and musician based in the Upper Midwest. What started as a childhood pastime has grown into a music career — original songs built on live instruments and a passionate voice that tells stories.</p>
-        <p class="body">Alongside her originals, Sarah and the band play the country and country-pop songs your crowd already knows by heart.</p>
-        <ul class="chips" aria-label="Artists Sarah covers">
-          <li>Rascal Flatts</li>
-          <li>Taylor Swift</li>
-          <li>Keith Urban</li>
-          <li>Maddie &amp; Tae</li>
-          <li>Blake Shelton</li>
-          <li>Carrie Underwood</li>
-          <li>Tenille Arts</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <section class="live" id="live">
-    <div class="container">
-      <div class="live__head">
-        <p class="eyebrow">Sarah Holdyn &amp; the Band</p>
-        <h2 class="h2">Built for the stage</h2>
-        <p class="lede">From taprooms to county fairs, a full live band with real instruments and a setlist that keeps the floor full.</p>
-      </div>
-      <div class="gallery">
-        <figure>
-          <img src="assets/img/stage.jpg" alt="Sarah singing with acoustic guitar on a brick-walled stage with her band" loading="lazy" style="object-position:50% 35%">
-          <figcaption>Full band · indoor venues</figcaption>
-        </figure>
-        <figure>
-          <img src="assets/img/fair.jpg" alt="Sarah in a cowboy hat playing acoustic guitar on an outdoor fair stage" loading="lazy" style="object-position:40% 50%">
-          <figcaption>Fairs · festivals · outdoor stages</figcaption>
-        </figure>
-      </div>
-    </div>
-  </section>
-
-  <section class="booking" id="contact">
-    <div class="container">
-      <div class="booking__copy">
+      <div class="cta-band__copy">
         <p class="eyebrow">Booking</p>
-        <h2 class="h2">Bring Sarah to your stage</h2>
+        <h2 class="h2" id="cta-title">Bring Sarah to your stage</h2>
         <p class="lede">Venues, festivals, fairs and private events. Solo acoustic or full band.</p>
-        <p class="contact">Booking contact: [BOOKING EMAIL]</p>
       </div>
-
-      <!-- StaticForms: replace [STATICFORMS_ACCESS_KEY] and [SITE_URL] before going live. -->
-      <form class="form" id="booking-form" action="https://api.staticforms.xyz/submit" method="post">
-        <input type="hidden" name="accessKey" value="[STATICFORMS_ACCESS_KEY]">
-        <input type="hidden" name="subject" value="New booking inquiry — sarahholdyn.com">
-        <input type="hidden" name="replyTo" value="@">
-        <input type="hidden" name="redirectTo" value="[SITE_URL]/?success=true#contact">
-        <input type="text" name="honeypot" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
-        <div class="field">
-          <label for="bk-name">Name</label>
-          <input id="bk-name" name="name" type="text" autocomplete="name" required>
-        </div>
-        <div class="field">
-          <label for="bk-email">Email</label>
-          <input id="bk-email" name="email" type="email" autocomplete="email" required>
-        </div>
-        <div class="field">
-          <label for="bk-event">Event date &amp; details</label>
-          <textarea id="bk-event" name="message" rows="4" required></textarea>
-        </div>
-        <button class="btn btn--gold" type="submit">Send booking inquiry</button>
-      </form>
+      <a class="btn btn--gold" href="contact/">Book Sarah</a>
     </div>
   </section>
 </main>
@@ -172,17 +109,5 @@
   </div>
 </footer>
 
-<script>
-  // Swap the form for a thank-you after StaticForms redirects back with ?success=true
-  if (new URLSearchParams(location.search).get('success') === 'true') {
-    var f = document.getElementById('booking-form');
-    if (f) {
-      var p = document.createElement('p');
-      p.className = 'form-msg';
-      p.textContent = 'Thanks — your booking inquiry is in. We’ll be in touch soon.';
-      f.replaceWith(p);
-    }
-  }
-</script>
 </body>
 </html>
