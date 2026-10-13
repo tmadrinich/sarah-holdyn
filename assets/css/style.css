@@ -8,8 +8,6 @@
   --surface: #1A2B3A;
   --line: #2C3E50;
   --stone: #8C939B;
-  --mist: #B9C0C8;
-  --ink-soft: #33424F;
 
   --font-display: 'Cinzel', Georgia, serif;
   --font-body: 'Work Sans', Helvetica, Arial, sans-serif;
@@ -121,7 +119,7 @@ h1, h2, h3, p, figure { margin: 0; }
   display: flex; flex-direction: column; gap: 14px;
 }
 .show__date { font-family: var(--font-display); font-weight: 600; font-size: 28px; color: var(--golden-hour); }
-.show__venue { font-size: 20px; font-weight: 500; }
+.show__venue { font-size: 20px; font-weight: 400; }
 .show__city { font-size: 15px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--stone); }
 .show .btn { margin-top: 8px; min-height: 46px; border-color: var(--golden-hour); color: var(--golden-hour); font-size: 13px; }
 .show .btn:hover { background: var(--golden-hour); color: var(--midnight-navy); }
@@ -131,9 +129,9 @@ h1, h2, h3, p, figure { margin: 0; }
 .about .container { display: flex; flex-wrap: wrap; align-items: center; gap: 64px; }
 .about__img { flex: 1 1 420px; min-width: 0; max-width: 580px; aspect-ratio: 4 / 3.5; object-fit: cover; }
 .about__copy { flex: 1 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 24px; }
-.about__copy p.body { font-size: 18px; line-height: 1.7; color: var(--ink-soft); }
+.about__copy p.body { font-size: 18px; font-weight: 400; line-height: 1.7; color: var(--midnight-navy); }
 .chips { display: flex; flex-wrap: wrap; gap: 10px; padding: 0; margin: 0; list-style: none; }
-.chips li { padding: 8px 16px; border: 1px solid var(--saddle-leather); color: var(--saddle-leather); font-size: 14px; font-weight: 500; border-radius: 999px; }
+.chips li { padding: 8px 16px; border: 1px solid var(--saddle-leather); color: var(--saddle-leather); font-size: 14px; font-weight: 600; border-radius: 999px; }
 .about a.link-caps { color: var(--saddle-leather); }
 
 /* Live */
@@ -149,7 +147,7 @@ h1, h2, h3, p, figure { margin: 0; }
 .booking { background: var(--midnight-navy); padding: 112px 0; border-top: 1px solid var(--line); }
 .booking .container { display: flex; flex-wrap: wrap; gap: 64px; align-items: start; }
 .booking__copy { flex: 1 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 20px; }
-.booking__copy .contact { font-size: 16px; color: var(--mist); }
+.booking__copy .contact { font-size: 18px; color: var(--prairie-cream); }
 .form {
   flex: 1 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 18px;
   background: var(--night-sky); border: 1px solid var(--line); padding: 40px;
